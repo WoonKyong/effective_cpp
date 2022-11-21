@@ -25,8 +25,8 @@ struct Year {
 };
 
 struct Date {
-  Date(const Month& m, const Day& d, const Year& y);
-  //Date(Month m, Day d, Year y);  ???  
+  Date(const Month& m, const Day& d, const Year& y) {}
+  //Date(Month m, Day d, Year y) {};  //???
 };
 
 int main() {
