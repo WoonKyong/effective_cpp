@@ -1,3 +1,5 @@
+// 항목 22 : 데이터 멤버가 선언될 곳은 private 영역임을 명심하자
+
 #include <iostream>
 #include <vector>
 using namespace std;

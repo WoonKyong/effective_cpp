@@ -1,3 +1,5 @@
+//항목 20: '값에 의한 전달'보다는 '상수객체 참조자에 의한 전달' 방식을 택하는 편이 대개 낫다
+
 #include <iostream>
 using namespace std;
 

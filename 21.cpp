@@ -1,3 +1,4 @@
+// 항목 21 : 함수에서 객체를 반환해야 할 경우에 참조자를 반환하려고 들지 말자
 #include <iostream>
 
 using namespace std;
@@ -24,8 +25,7 @@ class Rational {
         int d = 1;
         friend const Rational operator*(const Rational& lhs, const Rational& rhs);
         friend ostream& operator <<(ostream& o, const Rational& r) {
-            o << r.n << "/" << r.d;
-            return o;
+            return o << r.n << "/" << r.d;            
         }
 };
 
@@ -42,20 +42,21 @@ int main() {
 /* 
 const Rational& operator*(const Rational& lhs, const Rational& rhs)
 {
-Rational result(lhs.n * rhs.n, lhs.d * rhs.d);
-return result;
+  Rational result(lhs.n * rhs.n, lhs.d * rhs.d);
+  return result;
 }
 
 const Rational& operator*(const Rational& lhs, const Rational& rhs)
 {
-Rational *result = new Rational(lhs.n * rhs.n, lhs.d * rhs.d);
-return *result;
+  Rational *result = new Rational(lhs.n * rhs.n, lhs.d * rhs.d);
+  return *result;
 }
+
 
 const Rational& operator*(const Rational& lhs, const Rational& rhs)
 {
-Rational *result = new Rational(lhs.n * rhs.n, lhs.d * rhs.d);
-return *result;
+  static Rational result;
+  result = Rational(lhs.n * rhs.n, lhs.d * rhs.d);
+  return result;
 }
-
 */

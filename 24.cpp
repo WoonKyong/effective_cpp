@@ -1,3 +1,5 @@
+//항목 24 : 타입 변환이 모든 매개변수에 대해 적용되어야 한다면 비멤버 함수를 선언하자
+
 #include <iostream>
 using namespace std;
 
@@ -25,8 +27,7 @@ class Rational {
             return Rational(lhs.n * rhs.n, lhs.d * rhs.d);
         }
         friend ostream& operator <<(ostream& o, const Rational& r) {
-            o << r.n << "/" << r.d;
-            return o;
+            return o << r.n << "/" << r.d;
         }
 };
 

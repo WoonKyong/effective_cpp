@@ -1,3 +1,5 @@
+// 항목 18: 인터페이스 설계는 제대로 쓰기엔 쉽게, 엉터리로 쓰기엔 어렵게 하자
+
 #include <iostream>
 
 using namespace std;
